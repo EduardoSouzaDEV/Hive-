@@ -1,0 +1,106 @@
+:root {
+    --color-primary: #9d6d25;
+    --color-secondary: #efcc8b;
+    --color-primary-light: #f5eee6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #333; /* Cor de fundo preta */
+    color: #fff; /* Cor do texto branco */
+}
+
+.container {
+    width: auto;
+    margin: 0 auto;
+    background-image: url(./imagens/background-services.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    background-attachment: fixed;
+    text-align: center; /* Centraliza o conteúdo dentro do container */
+}
+
+h1 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2rem; /* Tamanho grande para o título */
+    margin-top: 20px; /* Espaçamento superior */
+    transition: transform 0.5s ease, color 0.5s ease; /* Adiciona uma transição suave */
+}
+
+h1:hover {
+    transform: scale(1.1); /* Efeito de zoom */
+    color: var(--color-primary); /* Muda a cor do texto ao passar o mouse */
+}
+
+#servicos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os blocos quebrem a linha se não houver espaço suficiente */
+    gap: 20px; /* Espaçamento entre os blocos */
+}
+
+.service-block {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    width: 500px; /* Largura fixa para os blocos */
+    background-color: #444; /* Cor de fundo dos serviços */
+    color: #fff; /* Cor do texto branco */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-gallery {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta as imagens que não estão ativas */
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.service-image.active {
+    opacity: 1;
+    position: relative;
+}
+
+.service-image:hover {
+    transform: scale(1.1);
+}
+
+.nav-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.prev-arrow,
+.next-arrow {
+    user-select: none;
+}

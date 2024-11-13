@@ -1,0 +1,203 @@
+
+:root {
+    --color-primary: #9d6d25;
+    --color-secondary: #efcc8b;
+    --color-primary-light: #f5eee6;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.body-page{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(./img/fundo-img-padronizado.jpg);
+    background-size: cover;
+}
+
+.form {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin: 20px 0;
+}
+
+.form img{
+    width: 350px;
+    margin-bottom: -80px;
+}
+
+.input-box,
+.input-box-hidden {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box h1,
+.input-box-hidden h1,
+.input-box-hidden-2  h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.input-box input,
+.input-box-hidden input,
+.input-box-hidden-2 input{
+    padding: 20px 45px 20px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #fff;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.input-box-hidden,
+.input-box-hidden-2,
+#btn-box-2{
+    display: none;
+}
+
+#btn-box:hover{
+    box-shadow: 0 0 25px #efcc8b, 0 0 50px #efcc8b,
+    0 0 100px #efcc8b, 0 0 200px #efcc8b;
+}
+
+.form .btn{
+    margin: 0 21px;
+    width: 35%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form .btn-box{
+    margin: 15px 20px;
+    width: 20%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 25px;
+    color: #333;
+    font-weight: 600;
+    display: block;
+}
+
+/***************
+    FOOTER
+***************/
+
+.footer {
+    background-color: #191919;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.footer ul{
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.footer ul li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+footer ul li img {
+    width: 60px;
+}
+
+/********************
+    MENU-HAMBURGUER
+********************/
+
+.hamburguer-menu{
+    width: 32px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    margin: 40px;
+    
+}
+
+.hamburguer-menu span{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin-bottom: 4px;
+    transition: transform 0.5s ease;
+}
+
+/**************
+    NAV
+**************/
+
+.nav{
+    border: 1px solid var(--color-primary);
+    box-shadow: 0 0 25px #efcc8b, 0 0 50px #efcc8b,
+    0 0 100px #efcc8b;
+    padding: 40px 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.5s ease;
+}
+
+.nav ul li{
+    list-style: none;
+    padding: 10px 50px;
+    
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 20px;
+    width: 80%;
+    padding: 10px 50px;
+    border-radius: 0px 30px 0px 30px;
+    transition: background 0.3s;
+}
+
+.nav ul li a:hover{
+    background-color: var(--color-primary);
+    transform: translateX(100px);
+}

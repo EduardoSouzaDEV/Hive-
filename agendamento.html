@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDSS Body Pierces</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+</head>
+<body class="body-appointment">
+            <div class="appointment">
+                <h1>Agendamento</h1>
+                <!-- Google Calendar Appointment Scheduling begin -->
+                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                <script>
+                    (function() {
+                    var target = document.currentScript;
+                    window.addEventListener('load', function() {
+                        calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0KFiDLPWZQzgyRAhmrQ1hnV0W0oPJ2uROkOSynrwR7blVRZaf2G235I4uYMqHv2WBsKzV2sfYY?gv=true',
+                        color: '#000000',
+                        label: "Reservar horário",
+                        target,
+                        });
+                    });
+                    })();
+                </script>
+                
+                <button onclick="window.open('pix.html')">Pagamento de reserva</button>
+            </div>                
+            <script src="./agendamento.js"></script>
+           
+<!-- end Google Calendar Appointment Scheduling -->
+</body>
+</html>

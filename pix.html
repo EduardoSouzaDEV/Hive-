@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDSS Body Pierces</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-paymnet">
+        <div class="paymnet">
+            <h1 id="display">Pague a reserva: R$50.00</h1>
+            <div id="paypal-button-container"></div>
+        </div>
+
+    <!-- Inclua o SDK do PayPal -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AVdy_yvZxYOy3hUCVB6eWnIHr-8g0SpTC2c7rAzXAzE0e3qQcB0NbCSWkQtrYZFmTl5Fo_BfDNgtnKaO&currency=BRL"></script>
+
+
+    <script>
+        paypal.Buttons({
+            createOrder: function(data, actions) {
+                // Configura o pedido de pagamento
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: "50.00"
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions) {
+                // Captura a transação quando o pagamento for aprovado
+                return actions.order.capture().then(function(details) {
+                    alert('Pagamento concluído com sucesso por ' + details.payer.name.given_name);
+                    // Você pode adicionar código adicional aqui para tratar o pagamento
+                });
+            },
+            onError: function(err) {
+                console.error(err);
+                alert('Ocorreu um erro ao processar seu pagamento.');
+            }
+        }).render('#paypal-button-container'); // Renderiza o botão de pagamento no container
+    </script>
+    
+</body>
+</html>
+

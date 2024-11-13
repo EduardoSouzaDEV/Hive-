@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="body-page">
+        <div class="container-menu">
+            <div class="hamburguer-menu" id="hamburguer-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#about">Sobre</a>
+                </li>
+                <li>
+                    <a href="./services/service.html">Serviços</a>
+                </li>
+                <li>
+                    <a href="./promocoes.html">Promoções</a>
+                </li>
+                <li>
+                    <a href="#appointment-page">Agendamento</a>
+                </li>
+                <li>
+                    <a href="#gallery">Galeria</a>
+                </li>
+                <li>
+                    <a href="#location">Localização</a>
+                </li>
+                <li>
+                    <a href="#location">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <form class="form">
+            <img src="./img/marca hive-25.png">
+            <div class="input-box">
+                <h1>qualquer nome</h1>
+                <input type="text" id="txt1" placeholder="">
+                <input type="text" id="txt1" placeholder="">
+                <input type="text" id="txt1" placeholder="">
+            </div>
+            <button type="button" class="btn-box" id="btn-box" >+</button>
+            <div class="input-box-hidden" id="input-box-hidden">
+                <h1>qualquer nome</h1>
+                <input type="text" id="txt1" placeholder="">
+                <input type="text" id="txt1" placeholder="">
+                <input type="text" id="txt1" placeholder="">
+            </div>
+            <button type="button" class="btn-box" id="btn-box-2" >+</button>
+            <div class="input-box-hidden-2" id="input-box-hidden-2">
+                <h1>qualquer nome</h1>
+                <input type="text" id="txt1" placeholder="">
+                <input type="text" id="txt1" placeholder="">
+                <input type="text" id="txt1" placeholder="">
+            </div>
+            <button type="button" class="btn">Ecaminha</button>
+            <button type="button" class="btn">Whats</button>
+    
+        </form>
+        
+    </div>
+    <footer class="footer">
+        2024 HDSS Body Pierces - Todos os direitos reservado.
+        <ul>
+            <li>
+                <img src="./img logo/instagram-logo.png" alt="">
+            </li>
+            <li>
+                <img src="./img logo/logo-whats.png" alt="">
+            </li>
+        </ul>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn-box').click(function(){
+                $('#input-box-hidden, #btn-box-2').slideToggle()
+            })
+            $("#btn-box").click(function() {
+                $(this).hide();
+            });
+
+            $('#btn-box-2').click(function(){
+                $('#input-box-hidden-2').slideToggle()
+            })
+            $("#btn-box-2").click(function() {
+                $(this).hide();
+            });
+
+            $('#hamburguer-menu').click(function(){
+            $('nav').slideToggle()
+            })
+
+        })
+    </script>
+    
+</body>
+</html>
